@@ -1,0 +1,70 @@
+{
+    "name": "servocoder/lumen-horizon",
+    "description": "Commands and code-driven configuration for Lumen queues.",
+    "keywords": [
+        "lumen",
+        "horizon",
+        "queue"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com"
+        },
+        {
+            "name": "Pavel Solomienko",
+            "email": "servocoder@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "ext-pcntl": "*",
+        "ext-posix": "*",
+        "cakephp/chronos": "^1.0",
+        "illuminate/contracts": "~5.5",
+        "illuminate/queue": "~5.5",
+        "illuminate/support": "~5.5",
+        "predis/predis": "^1.1",
+        "ramsey/uuid": "^3.5",
+        "symfony/debug": "~3.3"
+    },
+    "require-dev": {
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~6.0",
+        "orchestra/database": "~3.5",
+        "orchestra/testbench": "~3.5",
+        "orchestra/lumen": "~3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laravel\\Horizon\\": "src/"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Laravel\\Horizon\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Laravel\\Horizon\\HorizonServiceProvider"
+            ],
+            "aliases": {
+                "Horizon": "Laravel\\Horizon\\Horizon"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
