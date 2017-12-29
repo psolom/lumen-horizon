@@ -9,9 +9,42 @@ You are free to fetch and leverage the data on your own.
 Alternatively, you can install another Laravel application with Horizon on the board to watch jobs and metrics of your Lumen applications.
 Yep, the Laravel Horizon dashboard will show supervisor's processes that you run with Lumen. Enjoy!
 
+
+## Installation
+
+The installation is almost the same as original package.
+
+1. Composer dependency manager:
+
+```bash
+    composer require servocoder/lumen-horizon "*"
+```
+
+Alternatively, add the dependency directly to your composer.json file:
+
+```
+    "require": {
+        "servocoder/lumen-horizon": "*"
+    }
+```
+
+2. Publish `horizon.php` file to the config folder:
+
+```bash
+    php artisan vendor:publish --tag=horizon-config
+```
+
+or, as suggested in the official package docs:
+
+```bash
+    php artisan vendor:publish --provider="Laravel\Horizon\HorizonServiceProvider"
+```
+
+
 ## Official Documentation
 
 Documentation for Horizon can be found on the [Laravel website](http://laravel.com/docs/master/horizon).
+
 
 ## License
 
