@@ -9,12 +9,14 @@ You are free to fetch and leverage the data on your own.
 Alternatively, you can install another Laravel application with Horizon on the board to watch jobs and metrics of your Lumen applications.
 Yep, the Laravel Horizon dashboard will show supervisor's processes that you run with Lumen. Enjoy!
 
-NOTE: tested with **Lumen 5.5**
+Tested with **Lumen 5.5**
 
 
 ## Installation
 
 The installation is almost the same as original package.
+
+Note that the package namespace remains `Laravel\Horizon`, so don't install it along with original one to avoid conflicts.  
 
 1. Composer dependency manager:
 
